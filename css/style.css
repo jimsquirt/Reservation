@@ -1,0 +1,728 @@
+
+*								{ margin: 0; padding: 0; }
+body							{ font-family: "Lucida Grande", Arial, Sans-Serif;}
+
+a								{ text-decoration: none; outline: none; }
+a img							{ border: none; }
+
+h2								{ font-family: Georgia, Serif; font-size: 36px; text-align: center; 
+								  font-weight: normal; }
+
+#page-wrap						{ background: white; width: 100%; margin: 0 auto; 
+								  padding: 50px 0; }
+
+#slider							{ background: white url(../images/slider-bg.jpg); height: 227px;
+								overflow: hidden; position: relative; margin: 0;}
+								  
+                                /* DEFAULT is for three panels in width, adjust as needed
+                                   This only matters if JS is OFF, otherwise JS sets this. */								  
+#mover							{ width: 2880px; position: relative; }
+
+.slide							{ padding: 40px 30px; padding-left: 100px; width: 1200px; float: left; 
+									position: relative; }
+#sliderH1	h1					{ font-family: Helvetica, Sans-Serif; font-size: 30pt; letter-spacing: -1px;
+								  color: #ac0000; }
+.slide p						{ color: #999; font-size: 12px; line-height: 22px; width: 300px; }
+.slide img						{ position: absolute; top: 20px; left: 500px; }
+#slider-stopper					{ position: absolute; top: 1px; right: 20px; background: #ac0000; color: white;
+								  padding: 3px 8px; font-size: 10px; text-transform: uppercase; z-index: 1000; }
+
+.log td{
+    vertical-align:middle;
+        background:-o-linear-gradient(bottom, #ffffff 5%, #e5e5e5 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #e5e5e5) ); 
+    background:-moz-linear-gradient( center top, #ffffff 5%, #e5e5e5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#e5e5e5");  background: -o-linear-gradient(top,#ffffff,e5e5e5);
+
+    background-color:#ffffff;
+
+    border:1px solid #cccccc;
+    border-width:0px 1px 1px 0px;
+    text-align:left;
+    padding:7px;
+    font-size:10px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+
+}
+.log{
+    width: 100%;
+}.log tr:last-child td{
+    border-width:0px 1px 0px 0px;
+}.log tr td:last-child{
+    border-width:0px 0px 1px 0px;
+}.log tr:last-child td:last-child{
+    border-width:0px 0px 0px 0px;
+}
+.log tr:first-child td{
+        background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+    background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");  background: -o-linear-gradient(top,#cccccc,b2b2b2);
+    background-color:#cccccc;
+    border:0px solid #cccccc;
+    text-align:center;
+    border-width:0px 0px 1px 1px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+    color:#000000;
+}
+.log tr:first-child:hover td{
+    background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+    background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");  background: -o-linear-gradient(top,#cccccc,b2b2b2);
+    background-color:#cccccc;
+}
+.log tr:first-child td:first-child{
+    border-width:0px 0px 1px 0px;
+}
+.log tr:first-child td:last-child{
+    border-width:0px 0px 1px 1px;
+}
+#number {
+    width: 5%;
+}
+#activity {
+    width: 80%;
+}
+#date {
+    width: 30%;
+}
+
+#time {
+    width: 10%;
+}
+.logId { display:none; }
+
+
+a { text-decoration:none }
+.container { width:262px; margin:0 auto;}
+
+#bar { width:100%; height:25px; padding:10px; padding-bottom: 15px; background:url(../images/bar.png) repeat-x; }
+#container { width:960px; margin:0 auto;}
+
+/*-------LOGIN STARTS HERE -------*/
+
+/* Login Container (default to float:right) */
+#loginContainer {
+    position:relative;
+    float:right;
+    font-size:12px;
+}
+
+/* Login Button */
+
+#loginButton, #logoutButton { 
+    display:inline-block;
+    float:right;
+    background:#d2e0ea url(../images/buttonbg.png) repeat-x; 
+    border:1px solid #899caa; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}
+
+#reserveButton { 
+    display:inline-block;
+    background:#d2e0ea url(../images/buttonbg.png) repeat-x; 
+    border:1px solid #899caa; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 12pt;
+}
+
+#editButton {
+    display:inline-block;
+    background:#d2e0ea url(../images/buttonbg.png) repeat-x; 
+    border:1px solid #899caa; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 12pt; 
+}
+
+/* Login Button Text */
+#loginButton span, #reserveButton span, #editButton span{
+    color:#445058; 
+    font-size:14px; 
+    font-weight:bold; 
+    text-shadow:1px 1px #fff; 
+    padding:7px 29px 9px 10px;
+    background:url(../images/loginArrow.png) no-repeat 53px 7px;
+    display:block
+}
+
+#logoutButton span, #reserveButton span, #logoutButton span, #editButton spam {
+ color:#445058; 
+    font-size:14px; 
+    font-weight:bold; 
+    text-shadow:1px 1px #fff; 
+    padding:7px 10px 9px 10px;
+    display:block   
+}
+
+#loginButton:hover, #logoutButton:hover, #reserveButton:hover, #editButton:hover {
+    background:url(../images/buttonbgHover.png) repeat-x;
+}
+
+/* Login Box */
+#loginBox {
+    position:absolute;
+    top:34px;
+    right:0;
+    display:none;
+    z-index:29;
+}
+
+/* If the Login Button has been clicked */    
+#loginButton.active, #reserveButton.active {
+    border-radius:3px 3px 0 0;
+}
+
+#loginButton.active span, #reserveButton.active span {
+    background-position:53px -76px;
+}
+
+/* A Line added to overlap the border */
+#loginButton.active em, #reserveButton.active em {
+    position:absolute;
+    width:100%;
+    height:1px;
+    background:#d2e0ea;
+    bottom:-1px;
+}
+
+/* Login Form */
+#loginForm {
+    width:248px; 
+    height: 220px;
+    border:1px solid #899caa;
+    border-radius:3px 0 3px 3px;
+    -moz-border-radius:3px 0 3px 3px;
+    margin-top:-1px;
+    background:#d2e0ea;
+    padding:6px;
+}
+
+#loginForm fieldset {
+    margin:0 0 12px 0;
+    display:block;
+    border:0;
+    padding:0;
+}
+
+fieldset#body {
+    background:#fff;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    padding:10px 13px;
+    margin:0;
+}
+
+#loginForm #checkbox {
+    width:auto;
+    margin:1px 9px 0 0;
+    float:left;
+    padding:0;
+    border:0;
+    *margin:-3px 9px 0 0; /* IE7 Fix */
+}
+
+#body label {
+    color:#3a454d;
+    margin:9px 0 0 0;
+    display:block;
+    float:left;
+}
+
+#loginForm #body fieldset label {
+    display:block;
+    float:none;
+    margin:0 0 6px 0;
+}
+
+/* Default Input */
+#loginForm input {
+    width:92%;
+    border:1px solid #899caa;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    color:#3a454d;
+    font-weight:bold;
+    padding:8px 8px;
+    box-shadow:inset 0px 1px 3px #bbb;
+    -webkit-box-shadow:inset 0px 1px 3px #bbb;
+    -moz-box-shadow:inset 0px 1px 3px #bbb;
+    font-size:12px;
+}
+
+/* Sign In Button */
+#loginForm #login {
+    width:auto;
+    float:left;
+    background:#339cdf url(../images/loginbuttonbg.png) repeat-x;
+    color:#fff;
+    padding:7px 10px 8px 10px;
+    text-shadow:0px -1px #278db8;
+    border:1px solid #339cdf;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    margin:0 12px 0 0;
+    cursor:pointer;
+    *padding:7px 2px 8px 2px; /* IE7 Fix */
+}
+
+/* Forgot your password */
+#loginForm span {
+    text-align:center;
+    display:block;
+    padding:7px 0 4px 0;
+}
+
+#loginForm span a {
+    color:#3a454d;
+    text-shadow:1px 1px #fff;
+    font-size:12px;
+}
+
+input:focus {
+    outline:none;
+}
+
+
+/*Start of navigation plug in*/
+a { color: #222222; }
+a:hover { color: white; }
+
+.nav-wrap { 
+    margin-top: 0 auto; 
+     display:inline-block;
+    float: left;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}
+
+/* Clearfix */
+.group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+
+
+/* Example One */
+#example-one { 
+    margin: 0 auto; 
+    list-style: none; 
+    position: relative; 
+    width: 100%; 
+}
+#example-one li { 
+    display: inline-block; 
+
+}
+#example-one a { 
+    color: #666666; 
+    font-size: 14px; 
+    float: left;
+    padding: 6px 20px 4px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#example-one a:hover { 
+    color: white; 
+}
+.ie6 #example-one li, .ie7 #example-one li { 
+    display: inline; 
+}
+.ie6 #magic-line {
+    bottom: -3px;
+}
+
+
+
+/*notifications*/
+.message{
+        background-size: 40px 40px;
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+                            transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+                            transparent 75%, transparent);                                      
+         box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+         width: 100%;
+         border: 1px solid;
+         color: #fff;
+         padding: 15px;
+         position: fixed;
+         _position: absolute;
+         text-shadow: 0 1px 0 rgba(0,0,0,.5);
+         animation: animate-bg 5s linear infinite;
+}
+
+.info{
+         background-color: #4ea5cd;
+         border-color: #3b8eb5;
+}
+
+.error{
+         background-color: #de4343;
+         border-color: #c43d3d;
+}
+         
+.warning{
+         background-color: #eaaf51;
+         border-color: #d99a36;
+}
+
+.success{
+         background-color: #61b832;
+         border-color: #55a12c;
+}
+
+.message h3{
+         margin: 0 0 5px 0;                                                  
+}
+
+.message p{
+         margin: 0;                                                  
+}
+
+@keyframes animate-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+       background-position: -80px 0;
+    }
+}
+
+
+/*==================table css===================================*/
+
+body { 
+  background: #eee url('../images/repeat.jpg'); /* http://subtlepatterns.com/weave/ */
+}
+
+::selection { background: #5f74a0; color: #fff; }
+::-moz-selection { background: #5f74a0; color: #fff; }
+::-webkit-selection { background: #5f74a0; color: #fff; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 { 
+  font-family: 'Amarante', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('http://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('http://i.imgur.com/RkA9MBo.png');
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+
+/*=============================SIGN UP FORM ==============================*/
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 40px;
+  
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/*******************
+HEADER
+*******************/
+
+.login-form .header {
+  padding: 40px 30px 30px 30px;
+}
+
+.login-form .header h1 {
+  font-family: 'Bree Serif', serif;
+  font-weight: 300;
+  font-size: 28px;
+  line-height:34px;
+  color: #414848;
+  text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+  margin-bottom: 10px;
+}
+
+.login-form .header span {
+  font-size: 11px;
+  line-height: 16px;
+  color: #678889;
+  text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+}
+
+/*******************
+CONTENT
+*******************/
+
+.login-form .content {
+  padding: 0 30px 25px 30px;
+}
+
+/* Input field */
+.login-form .content .input {
+  width: 188px;
+  padding: 15px 25px;
+  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9d9e9e;
+  text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+  
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
+.failed {
+  font-size: 15pt;
+  color: red;
+  margin: 0 auto;
+}
+
+/* Second input field */
+
+.login-form .content .input:hover {
+  background: #dfe9ec;
+  color: #414848;
+}
+
+.login-form .content .input:focus {
+  background: #dfe9ec;
+  color: #414848;
+  
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+/*Third input*/
+
+.login-form .content .input:hover {
+  background: #dfe9ec;
+  color: #414848;
+}
+
+.login-form .content .input:focus {
+  background: #dfe9ec;
+  color: #414848;
+  
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.user-icon, .pass-icon, .name-icon {
+  width: 46px;
+  height: 47px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  padding-right: 2px;
+  z-index: -1;
+  
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon {
+  top:163px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+  background: rgba(65,72,72,0.75) url(../images/user-icon.png) no-repeat center; 
+}
+
+.pass-icon {
+  top:240px;
+  background: rgba(65,72,72,0.75) url(../images/pass-icon.png) no-repeat center;
+}
+
+.name-icon {
+  top:300px;
+  background: rgba(65,72,72,0.75) url(../images/user-icon.png) no-repeat center;
+}
+
+.content input:focus + div{
+  left: -46px;
+}
+
+/* Animation */
+.input, .user-icon, .pass-icon, .name-icon, .button, .register, .signup {
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+/*******************
+FOOTER
+*******************/
+
+.login-form .footer {
+  padding: 15px 20px 15px 30px;
+  overflow: auto;
+  
+  background: #d4dedf;
+  border-top: 1px solid #fff;
+  
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+}
+
+/* Login button */
+.login-form .footer .button {
+  float:right;
+  padding: 11px 25px;
+  
+  font-family: 'Bree Serif', serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+  
+  background: #56c2e1;
+  border: 1px solid #46b3d3;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+  -moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+  -webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.login-form .footer .button:hover {
+  background: #3f9db8;
+  border: 1px solid rgba(256,256,256,0.75);
+  
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.login-form .footer .button:focus {
+  position: relative;
+  bottom: -1px;
+  
+  background: #56c2e1;
+  
+  box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+  -moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+  -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+/* Register button */
+.login-form .footer .register, .login-form .footer .signup {
+  display: block;
+  float: right;
+  padding: 10px;
+  margin-right: 20px;
+  
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  font-family: 'Bree Serif', serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #414848;
+  text-shadow: 0px 1px 0 rgba(256,256,256,0.5);
+}
+
+.login-form .footer .register:hover, .login-form .footer .signup:hover {
+  color: #3f9db8;
+}
+
+.login-form .footer .register:focus, .login-form .footer .signup:focus {
+  position: relative;
+  bottom: -1px;
+}
+
+ .login-form .footer .signup {
+  float: none;
+  margin: o auto;
+ }
